@@ -3,4 +3,5 @@
     @include('frontend.section.hero')
     @include('frontend.section.about')
     @include('frontend.section.spesification')
+    @include('frontend.section.gallery')
 @endsection
