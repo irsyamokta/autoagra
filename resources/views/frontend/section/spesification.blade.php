@@ -1,4 +1,4 @@
-<section id="spesifikasi" class="flex flex-col lg:flex-row justify-center lg:justify-between items-center h-[100vh] bg-white overflow-hidden">
+<section id="spesifikasi" class="flex flex-col lg:flex-row justify-center lg:justify-between items-center h-[100vh] bg-[#EFEFEF] overflow-hidden">
     <div class="px-6 w-full lg:w-7/12 max-w-screen-xl py-16 xl:-mt-28 text-center lg:text-left">
         <h1 class="md:mb-4 text-2xl font-semibold tracking-wide text-black md:text-5xl xl:text-6xl text-wrap">Spesifikasi Autoagra</h1>
         <p class="text-sm md:text-lg lg:text-xl text-center lg:text-left font-regular mt-5 lg:mt-10 lg:pr-12 text-gray-700">Dilengkapi spesifikasi teknis seperti:</p>

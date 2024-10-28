@@ -4,4 +4,5 @@
     @include('frontend.section.about')
     @include('frontend.section.spesification')
     @include('frontend.section.gallery')
+    @include('frontend.section.report')
 @endsection
