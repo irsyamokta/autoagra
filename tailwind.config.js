@@ -7,6 +7,7 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        "./node_modules/flowbite/**/*.js"
     ],
 
     theme: {
@@ -14,7 +15,7 @@ export default {
             fontFamily: {
                 poppins: ['Poppins', 'sans-serif'],
             },
-            screens:{
+            screens: {
                 ...defaultTheme.screens,
             },
             colors: {
@@ -23,10 +24,16 @@ export default {
             },
             boxShadow: {
                 primary: '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+            },
+            backgroundImage: {
+                'hero-bg': "url('assets/img/img-bg.png')",
             }
 
         },
     },
 
-    plugins: [forms],
+    plugins: [
+        forms,
+        require('flowbite/plugin')
+    ],
 };

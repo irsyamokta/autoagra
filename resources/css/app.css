@@ -14,3 +14,7 @@
     }
 
 }
+
+.hero {
+    backgorund-image: url('../assets/img/img-bg.png');
+}
