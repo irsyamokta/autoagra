@@ -5,4 +5,5 @@
     @include('frontend.section.spesification')
     @include('frontend.section.gallery')
     @include('frontend.section.report')
+    @include('frontend.components.footer')
 @endsection
