@@ -7,9 +7,10 @@ use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\FlightDataController;
 
 Route::get('/', function () {
-    return view('frontend.index');
+    return app(FlightDataController::class)->showIndex();
+    // return view('frontend.index');
 });
-
+// Route::get('/report', [FlightDataController::class, 'showIndex'])->name('frontend.index');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

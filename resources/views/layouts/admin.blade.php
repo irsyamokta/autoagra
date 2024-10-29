@@ -18,10 +18,8 @@
             class="flex h-screen bg-gray-50 dark:bg-gray-900"
             :class="{ 'overflow-hidden': isSideMenuOpen }"
     >
-        <!-- Desktop sidebar -->
         @include('includes.desktop-sidebar')
 
-        <!-- Mobile sidebar -->
         @include('includes.mobile-sidebar')
 
         <div class="flex flex-col flex-1 w-full">
