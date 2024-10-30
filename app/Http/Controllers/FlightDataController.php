@@ -40,6 +40,13 @@ class FlightDataController extends Controller
 
     public function showIndex()
     {
+        $currentMonth = now()->month;
+        $currentYear = now()->year;
+
+        $flightData = FlightData::whereMonth('created_at', $currentMonth)
+                                ->whereYear('created_at', $currentYear)
+                                ->get();
+
         $flightData = FlightData::all();
         $totals = [
             'totalFlightTime' => $flightData->sum('flight_time'),
