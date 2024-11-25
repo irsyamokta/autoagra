@@ -8,27 +8,14 @@ use App\Http\Controllers\FlightDataController;
 
 Route::get('/', function () {
     return app(FlightDataController::class)->showIndex();
-    // return view('frontend.index');
-});
-// Route::get('/report', [FlightDataController::class, 'showIndex'])->name('frontend.index');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware(['auth'])->prefix('profile')->name('profile.')->group(function () {
-    Route::get('/', [ProfileController::class, 'edit'])->name('edit');
-    Route::patch('/', [ProfileController::class, 'update'])->name('update');
-    Route::delete('/', [ProfileController::class, 'destroy'])->name('destroy');
 });
 
-//admin routes
-Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
-    //single action controllers
-    Route::get('/', HomeController::class)->name('home');
-    Route::get('/forms', [FlightDataController::class, 'create'])->name('forms');
-    Route::post('/forms', [FlightDataController::class, 'store'])->name('store');
-    Route::get('/index', [FlightDataController::class, 'index'])->name('index');
-
+Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
+    Route::get('/', HomeController::class)->name('admin.home');
+    Route::get('/forms', [FlightDataController::class, 'create'])->name('admin.forms');
+    Route::post('/forms', [FlightDataController::class, 'store'])->name('admin.store');
+    Route::get('/index', [FlightDataController::class, 'index'])->name('admin.index');
 });
+
 
 require __DIR__.'/auth.php';
