@@ -34,7 +34,7 @@ class FlightDataController extends Controller
             'totalPesticideLiters' => $flightData->sum('pesticide_liters'),
             'totalNumberOfFlights' => $flightData->sum('number_of_flights'),
         ];
-
+        
         return view('admin.index', compact('flightData', 'totals'));
     }
 
@@ -46,6 +46,7 @@ class FlightDataController extends Controller
             'totalPesticideLiters' => $flightData->sum('pesticide_liters'),
             'totalNumberOfFlights' => $flightData->sum('number_of_flights'),
         ];
+
         return view('frontend.index', compact('flightData', 'totals'));
     }
 }

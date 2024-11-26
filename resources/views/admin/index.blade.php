@@ -19,6 +19,7 @@
                       class="text-lg font-semibold text-gray-700 dark:text-gray-200"
                     >
                     <!-- to show the total flight time -->
+                    {{ $totals['totalFlightTime'] }}
                     </p>
                   </div>
                 </div>
@@ -37,6 +38,7 @@
                       Pesticide Liters
                     </p>
                     <!-- to show the total pesticide liter -->
+                    {{ $totals['totalPesticideLiters'] }}
                     <p
                       class="text-lg font-semibold text-gray-700 dark:text-gray-200"
                     >
@@ -58,6 +60,7 @@
                       Number Flights
                     </p>
                     <!-- to show the total flight -->
+                    {{ $totals['totalNumberOfFlights'] }}
                     <p
                       class="text-lg font-semibold text-gray-700 dark:text-gray-200"
                     >
